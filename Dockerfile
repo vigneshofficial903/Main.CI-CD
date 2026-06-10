@@ -7,6 +7,6 @@ RUN pip install -r requirements.txt
 
 COPY ..
 
-RUN chmod +x entrypoint.sh
+RUN pip install pytest pytest-cov
 
-ENTRYPOINT ["./entrypoint.sh"]
+CMD ["pytest","tests/"]
